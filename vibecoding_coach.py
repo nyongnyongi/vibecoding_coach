@@ -24,7 +24,7 @@ class VibeCodingTeam:
         """
         self.api_key = api_key
         genai.configure(api_key=api_key)
-        self.model = GenerativeModel('gemini-2.5-pro-preview-05-06')
+        self.model = GenerativeModel('gemini-1.5-flash')
         
         # 3명의 특화된 바이브 코딩 코치 초기화
         self.concept_coach = ConceptCoach(self.model)  # 바이브 코딩 개념 및 원리 전문가
@@ -1160,4 +1160,5 @@ def get_file_extension(language):
 
 # 스크립트가 직접 실행될 때만 main() 함수 실행
 if __name__ == "__main__":
+
     main()
